@@ -1,0 +1,58 @@
+/* colores del tema */
+
+/* #1A1A1A */
+/* #F5F5F5 */
+
+/* texto */
+/* #E0E0E0 */
+/* #333333 */
+
+/* botones */
+/* #4CAF50 */
+/* #00695C */
+/* hover */
+/* #45A049 */
+/* #004D40 */
+
+/* css general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* css de container */
+.theme-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid;
+  border-radius: 50%;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* colores del boton de tema */
+.button-dark {
+  background-color: #09004b;
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.button-light {
+  background-color: #b1d1f9;
+  color: #333333;
+  border-color: #333333;
+}

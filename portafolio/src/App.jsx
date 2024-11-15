@@ -1,12 +1,42 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React, { Fragment, useState } from "react";
+
+// componentes
+import Header from "./components/Header";
+
+// iconos
+import { MdLightMode } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
+
+// css
+import "./styles/base.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // estado para cambio de tema
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-  return <>hola</>;
+  // cambio de tema
+  const toggleTheme = () => {
+    setIsDarkTheme(!isDarkTheme);
+  };
+
+  console.log(isDarkTheme);
+
+  return (
+    <div className="container">
+      <Header isDarkTheme={isDarkTheme} />
+      <main>
+        hola
+        <button
+          className={`theme-button ${
+            isDarkTheme ? "button-dark" : "button-light"
+          }`}
+          onClick={toggleTheme}
+        >
+          {isDarkTheme ? <FaMoon /> : <MdLightMode />}
+        </button>
+      </main>
+    </div>
+  );
 }
 
 export default App;
