@@ -4,13 +4,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: #333;
+}
+
+.header-dark {
+  background-color: #030019;
   color: #fff;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
+.header-light {
+  background-color: #0c0064;
+  color: #fff;
 }
 
 .nav {
@@ -31,7 +34,11 @@
 }
 
 .nav a:hover {
-  color: #f0a500;
+  color: #45a049;
+}
+
+.title {
+  font-weight: bold;
 }
 
 /* Estilos para el menú móvil */
@@ -53,19 +60,33 @@
 @media (max-width: 768px) {
   .nav {
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 0;
-    background-color: #333;
     width: 100%;
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* animacion de aparicion */
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+  }
+
+  .nav-dark {
+    background-color: #030019;
+  }
+  .nav-light {
+    background-color: #0c0064;
   }
 
   .nav.open {
     display: flex;
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s;
   }
 
   .nav ul {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/header.css";
 
-const Header = () => {
+const Header = ({ isDarkTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,21 +9,27 @@ const Header = () => {
   };
 
   return (
-    <header className="header">
-      <div className="title">MyLogo</div>
-      <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+    <header
+      className={`header ${isDarkTheme ? "header-dark" : "header-light"}`}
+    >
+      <div className="title">Alejandro V. DEV</div>
+      <nav
+        className={`nav ${isMenuOpen ? "open" : ""} ${
+          isDarkTheme ? "nav-dark" : "nav-light"
+        }`}
+      >
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#inicio">Inicio</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#portafolio">Portafolio</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#sobre-mi">Sobre mi</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contacto">Contacto</a>
           </li>
         </ul>
       </nav>
