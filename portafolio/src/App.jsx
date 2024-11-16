@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 
 // componentes
 import Header from "./components/Header";
+import Inicio from "./components/Inicio";
 
 // iconos
 import { MdLightMode } from "react-icons/md";
@@ -19,13 +20,11 @@ function App() {
     setIsDarkTheme(!isDarkTheme);
   };
 
-  console.log(isDarkTheme);
-
   return (
     <div className="container">
       <Header isDarkTheme={isDarkTheme} />
       <main>
-        hola
+        <Inicio isDarkTheme={isDarkTheme} />
         <button
           className={`theme-button ${
             isDarkTheme ? "button-dark" : "button-light"

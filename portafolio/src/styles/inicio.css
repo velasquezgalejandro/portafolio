@@ -1,0 +1,32 @@
+/* estilos de inicio */
+
+.inicio-container {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.container-dark {
+  background: rgb(29, 42, 86);
+  background: radial-gradient(
+    circle,
+    rgba(29, 42, 86, 1) 14%,
+    rgba(10, 26, 58, 1) 26%,
+    rgba(28, 42, 74, 1) 45%,
+    rgba(15, 27, 59, 1) 65%
+  );
+}
+
+.container-light {
+  background: rgb(163, 196, 215);
+  background: radial-gradient(
+    circle,
+    rgba(163, 196, 215, 1) 10%,
+    rgba(124, 158, 232, 1) 26%,
+    rgba(58, 119, 209, 1) 47%,
+    rgba(121, 169, 208, 1) 65%
+  );
+}
