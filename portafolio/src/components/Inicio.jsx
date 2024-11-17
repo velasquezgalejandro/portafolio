@@ -16,15 +16,17 @@ const Inicio = ({ isDarkTheme }) => {
     link.click();
   };
 
-  const renderIconButton = (icon) => {
+  const renderIconButton = (icon, link) => {
     return (
-      <button
-        className={`boton-redes ${
-          isDarkTheme ? "boton-redes-dark" : "boton-redes-light"
-        }`}
-      >
-        {icon}
-      </button>
+      <a href={link} target="_blank">
+        <button
+          className={`boton-redes ${
+            isDarkTheme ? "boton-redes-dark" : "boton-redes-light"
+          }`}
+        >
+          {icon}
+        </button>
+      </a>
     );
   };
 
@@ -56,12 +58,26 @@ const Inicio = ({ isDarkTheme }) => {
           >
             curriculum <FaDownload />
           </button>
-          {renderIconButton(<FaGithub />)}
-          {renderIconButton(<FaXTwitter />)}
-          {renderIconButton(<FaLinkedin />)}
+          {renderIconButton(
+            <FaGithub />,
+            "https://github.com/velasquezgalejandro"
+          )}
+          {renderIconButton(
+            <FaXTwitter />,
+            "https://x.com/alejand91422268?s=09"
+          )}
+          {renderIconButton(<FaLinkedin />, "https://co.linkedin.com/")}
         </div>
       </div>
-      <div className={`imagen-container`}>Imagen</div>
+      <div className={`imagen-container`}>
+        <div className={"imagen-wrapper"}>
+          <img
+            className={"imagen-codigo"}
+            src="/assets/img/carbon.png"
+            alt="Imagen con codigo"
+          />
+        </div>
+      </div>
     </div>
   );
 };
