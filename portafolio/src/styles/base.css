@@ -16,6 +16,7 @@
 /* #004D40 */
 
 /* fondos */
+/* #295392 */
 /* #1d2a56 */
 /* #0a1a3a */
 /* #0f1b3b */
@@ -24,6 +25,7 @@
 /* #a3c4d7 */
 /* #7c9ee8 */
 /* #79a9d0 */
+/* #b0c9ed */
 
 /* css general */
 * {
@@ -36,13 +38,36 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* scrollbar (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+  background-color: #0a1a3a;
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+}
+
+/* El área de fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #1c2a4a;
+}
+
+/* El scrollbar vertical */
+::-webkit-scrollbar-vertical {
+  width: 8px;
+}
+
 /* css de container */
 .theme-button {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  position: absolute;
+  position: fixed;
   right: 16px;
   bottom: 16px;
 

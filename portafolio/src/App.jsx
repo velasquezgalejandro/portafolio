@@ -3,6 +3,7 @@ import React, { Fragment, useState } from "react";
 // componentes
 import Header from "./components/Header";
 import Inicio from "./components/Inicio";
+import Portafolio from "./components/Portafolio";
 
 // iconos
 import { MdLightMode } from "react-icons/md";
@@ -25,15 +26,17 @@ function App() {
       <Header isDarkTheme={isDarkTheme} />
       <main>
         <Inicio isDarkTheme={isDarkTheme} />
-        <button
-          className={`theme-button ${
-            isDarkTheme ? "button-dark" : "button-light"
-          }`}
-          onClick={toggleTheme}
-        >
-          {isDarkTheme ? <FaMoon /> : <MdLightMode />}
-        </button>
+        <Portafolio isDarkTheme={isDarkTheme} />
       </main>
+
+      <button
+        className={`theme-button ${
+          isDarkTheme ? "button-dark" : "button-light"
+        }`}
+        onClick={toggleTheme}
+      >
+        {isDarkTheme ? <FaMoon /> : <MdLightMode />}
+      </button>
     </div>
   );
 }

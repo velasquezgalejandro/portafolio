@@ -240,8 +240,20 @@
   width: 100%;
   border-radius: 24px;
   transition: transform 0.3s ease-in-out;
+  animation: fadeInImage 0.5s ease-out;
 }
 
 .imagen-codigo:hover {
   transform: scale(1.01);
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
