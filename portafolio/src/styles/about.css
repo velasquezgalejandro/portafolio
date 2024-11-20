@@ -1,0 +1,129 @@
+/* estilos de container */
+.about-container {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 16px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+
+.about-container-dark {
+  background-color: #0a1a3a;
+}
+.about-container-light {
+  background-color: #79a9d0;
+}
+
+/* estilos de imagen */
+
+.imagen-about-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-about-wrapper {
+  padding: 24px;
+  height: 250px;
+  width: 250px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.imagen-about-wrapper-dark {
+  background-color: #1d2a56;
+  box-shadow: 0 0 0 3px #004d40;
+  border: 3px solid #45a049;
+}
+
+.imagen-about-wrapper-light {
+  background-color: #b0c9ed;
+  border: 3px solid #4caf50;
+  box-shadow: 0 0 0 3px #00695c;
+}
+
+.imagen-about-animation {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.imagen-personal {
+  height: 100%;
+  width: auto;
+}
+
+/* estilos descripcion */
+
+.descripcion-about-container {
+  flex: 1;
+  border-radius: 8px;
+  min-height: 250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  padding: 16px;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.descripcion-about-animation {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.descripcion-about-container-dark {
+  background-color: #1d2a56;
+  box-shadow: 0 0 0 3px #004d40;
+  border: 3px solid #45a049;
+}
+.descripcion-about-container-light {
+  background-color: #b0c9ed;
+  border: 3px solid #4caf50;
+  box-shadow: 0 0 0 3px #00695c;
+}
+
+.about-titulo {
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: underline;
+  padding-bottom: 16px;
+}
+
+.about-titulo-dark {
+  color: #e0e0e0;
+}
+.about-titulo-light {
+  color: #111111;
+}
+
+.about-descripcion {
+  line-height: 1.2; /* Espaciado entre líneas para mayor legibilidad */
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+.about-descripcion-dark {
+  color: #cacaca;
+}
+.about-descripcion-light {
+  color: #333333;
+}
+
+.tecnologias {
+  font-weight: 600;
+}
