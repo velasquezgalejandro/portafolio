@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 import "../styles/inicio.css";
 
-const Inicio = ({ isDarkTheme }) => {
+const Inicio = ({ isDarkTheme, inicioRef }) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/assests/pdfs/dummy.pdf";
@@ -32,6 +32,7 @@ const Inicio = ({ isDarkTheme }) => {
 
   return (
     <div
+      ref={inicioRef}
       className={`inicio-container ${
         isDarkTheme ? "container-dark" : "container-light"
       }`}

@@ -13,7 +13,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 import "../styles/portafolio.css";
 
-const Portafolio = ({ isDarkTheme }) => {
+const Portafolio = ({ isDarkTheme, portafolioRef }) => {
   const tecnologiaCard = (icon, nombre, link) => {
     return (
       <a href={link} target="_blank">
@@ -32,6 +32,7 @@ const Portafolio = ({ isDarkTheme }) => {
   const proyectoCard = (titulo, descripcion, link) => {
     return (
       <div
+        ref={portafolioRef}
         className={`proyecto-card ${
           isDarkTheme ? "proyecto-card-dark" : "proyecto-card-light"
         }`}

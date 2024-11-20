@@ -1,11 +1,21 @@
 import React, { useState } from "react";
 import "../styles/header.css";
 
-const Header = ({ isDarkTheme }) => {
+const Header = ({
+  isDarkTheme,
+  inicioRef,
+  portafolioRef,
+  aboutRef,
+  contactRef,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -20,16 +30,27 @@ const Header = ({ isDarkTheme }) => {
       >
         <ul>
           <li>
-            <a href="#inicio">Inicio</a>
+            <a onClick={() => scrollToSection(inicioRef)} href="#inicio">
+              Inicio
+            </a>
           </li>
           <li>
-            <a href="#portafolio">Portafolio</a>
+            <a
+              onClick={() => scrollToSection(portafolioRef)}
+              href="#portafolio"
+            >
+              Portafolio
+            </a>
           </li>
           <li>
-            <a href="#sobre-mi">Sobre mi</a>
+            <a onClick={() => scrollToSection(aboutRef)} href="#sobre-mi">
+              Sobre mi
+            </a>
           </li>
           <li>
-            <a href="#contacto">Contacto</a>
+            <a onClick={() => scrollToSection(contactRef)} href="#contacto">
+              Contacto
+            </a>
           </li>
         </ul>
       </nav>
