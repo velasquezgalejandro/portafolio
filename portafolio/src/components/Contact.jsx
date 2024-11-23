@@ -96,7 +96,14 @@ const Contact = ({ isDarkTheme, contactRef }) => {
           {renderInput("email", "mail", formData.email)}
           {renderInput("asunto", "text", formData.asunto)}
           {renderTextArea("mensaje", "mensaje", formData.mensaje, "test")}
-          <button type="submit">Enviar</button>
+          <button
+            type="submit"
+            className={`button-submit ${
+              isDarkTheme ? "button-submit-dark" : "button-submit-light"
+            }`}
+          >
+            Enviar
+          </button>
         </form>
       </div>
     </div>

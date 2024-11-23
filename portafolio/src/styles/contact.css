@@ -103,3 +103,42 @@
 .contact-textarea-dark {
   background-color: #666666;
 }
+
+.button-submit {
+  border: 2px solid;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.button-submit:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-submit-dark {
+  background-color: #b0c9ed;
+  border-color: #0a1a3a;
+  color: #0a1a3a;
+}
+
+.button-submit-dark:hover {
+  background-color: #7c9ee8;
+  border-color: #111111;
+  color: #111111;
+}
+
+.button-submit-light {
+  background-color: #0f1b3b;
+  color: #b0c9ed;
+  border-color: #a3c4d7;
+}
+
+.button-submit-light:hover {
+  background-color: #1d2a56;
+  color: #e0e0e0;
+  border-color: #b0c9ed;
+}
