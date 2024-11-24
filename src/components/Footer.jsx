@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "../styles/footer.css";
 
 const Footer = ({ isDarkTheme, message }) => {
+  // render
   const renderIconButton = (icon, link) => {
     return (
       <a href={link} target="_blank">
@@ -17,6 +18,7 @@ const Footer = ({ isDarkTheme, message }) => {
     );
   };
 
+  //componente
   return (
     <footer
       className={`footer ${isDarkTheme ? "footer-dark" : "footer-light"}`}
@@ -41,8 +43,8 @@ const Footer = ({ isDarkTheme, message }) => {
         )}
       </div>
       <p className="copyright">
-        <span className="bold">&copy; 2024 Tu Nombre.</span> Todos los derechos
-        reservados.
+        <span className="bold">&copy; 2024 Alejandro V DEV.</span> Todos los
+        derechos reservados.
       </p>
     </footer>
   );

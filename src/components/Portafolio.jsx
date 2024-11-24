@@ -14,6 +14,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import "../styles/portafolio.css";
 
 const Portafolio = ({ isDarkTheme, portafolioRef }) => {
+  // renders
   const tecnologiaCard = (icon, nombre, link) => {
     return (
       <a href={link} target="_blank">
@@ -52,6 +53,7 @@ const Portafolio = ({ isDarkTheme, portafolioRef }) => {
     );
   };
 
+  // componente
   return (
     <div
       className={`portafolio-container ${

@@ -8,8 +8,10 @@ const Header = ({
   aboutRef,
   contactRef,
 }) => {
+  // estados
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // funciones
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -18,6 +20,7 @@ const Header = ({
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
+  // componente
   return (
     <header
       className={`header ${isDarkTheme ? "header-dark" : "header-light"}`}

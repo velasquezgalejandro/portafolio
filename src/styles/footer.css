@@ -42,7 +42,7 @@
   color: #e0e0e0;
 }
 
-.boton-redes:hover {
+.boton-redes-footer:hover {
   cursor: pointer;
   animation: shake 0.3s ease-in-out;
 }

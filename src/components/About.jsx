@@ -1,11 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import "../styles/about.css";
 
 const About = ({ isDarkTheme, aboutRef }) => {
+  // estados
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = aboutRef;
 
+  // effectos
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -29,8 +31,7 @@ const About = ({ isDarkTheme, aboutRef }) => {
     };
   }, []);
 
-  console.log(isVisible);
-
+  // componente
   return (
     <div
       ref={aboutRef}

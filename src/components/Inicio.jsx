@@ -10,6 +10,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import "../styles/inicio.css";
 
 const Inicio = ({ isDarkTheme, inicioRef, message }) => {
+  // funciones
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/assests/pdfs/dummy.pdf";
@@ -17,6 +18,7 @@ const Inicio = ({ isDarkTheme, inicioRef, message }) => {
     link.click();
   };
 
+  // renders
   const renderIconButton = (icon, link) => {
     return (
       <a href={link} target="_blank">
@@ -31,6 +33,7 @@ const Inicio = ({ isDarkTheme, inicioRef, message }) => {
     );
   };
 
+  // componente
   return (
     <div
       ref={inicioRef}

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../styles/contact.css";
 
 const Contact = ({ isDarkTheme, contactRef }) => {
+  // estado
   const [formData, setFormData] = useState({
     nombre: "",
     email: "",
@@ -10,6 +11,7 @@ const Contact = ({ isDarkTheme, contactRef }) => {
     mensaje: "",
   });
 
+  // funciones
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,6 +20,7 @@ const Contact = ({ isDarkTheme, contactRef }) => {
     }));
   };
 
+  // renders
   const renderLabel = (nombre) => {
     return (
       <label
@@ -72,6 +75,7 @@ const Contact = ({ isDarkTheme, contactRef }) => {
     );
   };
 
+  // componente
   return (
     <div
       ref={contactRef}

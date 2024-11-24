@@ -40,6 +40,7 @@ function App() {
 
   return (
     <div className="container">
+      {/* header */}
       <Header
         isDarkTheme={isDarkTheme}
         inicioRef={inicioRef}
@@ -47,6 +48,7 @@ function App() {
         aboutRef={aboutRef}
         contactRef={contactRef}
       />
+      {/* componentes */}
       <main>
         <Inicio
           isDarkTheme={isDarkTheme}
@@ -59,6 +61,7 @@ function App() {
       </main>
       <Footer isDarkTheme={isDarkTheme} message={message} />
 
+      {/* botones estaticos */}
       <button
         className={`top-button ${isDarkTheme ? "button-dark" : "button-light"}`}
         onClick={scrollToTop}
