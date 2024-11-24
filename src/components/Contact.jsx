@@ -96,10 +96,15 @@ const Contact = ({ isDarkTheme, contactRef }) => {
           >
             Contactanos
           </p>
-          {renderInput("nombre", "text", formData.nombre)}
-          {renderInput("email", "mail", formData.email)}
-          {renderInput("asunto", "text", formData.asunto)}
-          {renderTextArea("mensaje", "mensaje", formData.mensaje, "test")}
+          {renderInput("nombre", "text", formData.nombre, "Nombre")}
+          {renderInput("email", "mail", formData.email, "Correo electronico")}
+          {renderInput("asunto", "text", formData.asunto, "Asunto de contacto")}
+          {renderTextArea(
+            "mensaje",
+            "mensaje",
+            formData.mensaje,
+            "Dime tu mensaje..."
+          )}
           <button
             type="submit"
             className={`button-submit ${
