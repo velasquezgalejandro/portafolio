@@ -58,4 +58,4 @@ Pasos para instalar el proyecto localmente:
 npm run dev
 ```
 
-5. **Ejecuta el servidor de desarrollo**
+5. **Finalmente abre el proyecto en el navegador**
