@@ -84,7 +84,7 @@ const Contact = ({ isDarkTheme, contactRef }) => {
           isDarkTheme ? "contact-card-dark" : "contact-card-light"
         }`}
       >
-        <form action="POST">
+        <form action="https://getform.io/f/bejjvyza" method="POST">
           <p
             className={`titulo-form ${
               isDarkTheme ? "titulo-form-dark" : "titulo-form-light"
