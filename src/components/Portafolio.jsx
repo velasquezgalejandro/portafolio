@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // iconos
 import { FaDocker } from "react-icons/fa6";
@@ -14,6 +14,35 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import "../styles/portafolio.css";
 
 const Portafolio = ({ isDarkTheme, portafolioRef }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = portafolioRef;
+
+  // effectos
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  console.log({ sectionRef });
+
   // renders
   const tecnologiaCard = (icon, nombre, link) => {
     return (
@@ -60,7 +89,11 @@ const Portafolio = ({ isDarkTheme, portafolioRef }) => {
         isDarkTheme ? "portafolio-container-dark" : "portafolio-container-light"
       }`}
     >
-      <div className="stack-wrapper">
+      <div
+        className={`stack-wrapper ${
+          isVisible ? "stack-wrapper-animation" : ""
+        }`}
+      >
         <p className={`stack-titulo`}>Stack de Desarrollo</p>
         <div className={`tecnologias-container`}>
           {tecnologiaCard(<FaDocker />, "docker", "https://www.docker.com/")}
@@ -89,7 +122,11 @@ const Portafolio = ({ isDarkTheme, portafolioRef }) => {
           )}
         </div>
       </div>
-      <div className="proyectos-wrapper">
+      <div
+        className={`proyectos-wrapper ${
+          isVisible ? "proyectos-wrapper-animation" : ""
+        }`}
+      >
         <p className={`stack-titulo`}>Proyectos</p>
         <div className="proyectos-container">
           {proyectoCard(
